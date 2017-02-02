@@ -3,11 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>JS Test</title>
-    https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   </head>
-  <body>
-    <div class="" id="resultados">
+  <script type="text/javascript">
+  $( document ).ready(function() {
+    function operando(){
+      var n1 = parseInt($("#n1").val());
+      var n2 = parseInt($("#n2").val());
+      var suma = n1 + n2;
+      var resta = n1 - n2;
+      var mult = n1 * n2;
+      $("#resultados").append("La suma V1 + V2 = " + suma + "<br>");
+      $("#resultados").append("La resta V1 - V2 = " + resta + "<br>");
+      $("#resultados").append("La multiplicación V1 x V2 = " + mult + "<hr>");
+    }
+    $("#n1").change(operando);
+    $("#n2").change(operando);
+  });
 
+  </script>
+  <body>
+    <div class="inputs">
+      <label for="n1">Valor 1</label>
+      <input type="number" name="" value="0" id="n1">
+      <br>
+      <label for="n2">Valor 2</label>
+      <input type="number" name="" value="0" id="n2">
+    </div>
+    <hr>
+    <div class="" id="resultados">
+      <h1>Resultados</h1>
     </div>
   </body>
 </html>
